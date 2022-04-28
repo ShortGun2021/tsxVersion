@@ -14,13 +14,13 @@
 
 
 import React from 'react'
-import {Toggle} from 'rsuite';
+import { Toggle } from 'rsuite';
 import "rsuite/dist/rsuite.min.css";
 const ToggleBtn = () => {
   return (
     <>
     <div>
-        <Toggle />
+    <Toggle />
     </div>
     </>
   )

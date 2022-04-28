@@ -1,4 +1,6 @@
 import React from 'react'
+import PropModal from './PropModal'
+
 import { Dropdown, DropdownToggle, Button, Table } from 'reactstrap'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { GrStar } from 'react-icons/gr'
@@ -43,7 +45,8 @@ const CreateCollection = () => {
                                     color='white'
                                     // onClick={}
                                 >
-                                    <h1><BsPlusSquare size={"1.5em"} /></h1>
+                                    <PropModal/>
+                                    
                                 </Button>
                             </td>
                         </tr>
@@ -60,7 +63,7 @@ const CreateCollection = () => {
                                     color='white'
                                     // onClick={}
                                 >
-                                    <h1><BsPlusSquare size={"1.5em"} /></h1>
+                                    <PropModal/>
                                 </Button>
                             </td>
                         </tr>
@@ -74,7 +77,7 @@ const CreateCollection = () => {
                             </td>
                             <td>
                                 <Button color='white'>
-                                    <h1><BsPlusSquare size={"1.5em"} /></h1>
+                                <PropModal/>
                                 </Button>
                             </td>
                         </tr>
@@ -87,7 +90,7 @@ const CreateCollection = () => {
                                 <p>Include unlockable content that can only be revealed by the owner of the item.</p>
                             </td>
                             <td>
-                                <ToggleSwitch />
+                                <ToggleSwitch label={"No"} />
                             </td>
                         </tr>
                         <tr>
@@ -99,7 +102,7 @@ const CreateCollection = () => {
                                 <p>Set this item as explicit and sensitive content <AiOutlineInfoCircle /></p>
                             </td>
                             <td>
-                                <ToggleSwitch />
+                                <ToggleSwitch label={"Yes"} />
                             </td>
                         </tr>
                     </tbody>

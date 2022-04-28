@@ -4,7 +4,7 @@ import "../../Assets/css/ToggleSwitch.css";
 const ToggleSwitch = ({ label }) => {
 return (
 	<div className="container">
-	{label}{" "}
+	{/* {label}{" "} */}
 	<div className="toggle-switch">
 		<input type="checkbox" className="checkbox"
 			name={label} id={label} />

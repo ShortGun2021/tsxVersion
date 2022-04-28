@@ -1,4 +1,4 @@
-.container {
+ .container {
     text-align: left;
 }
 
@@ -51,7 +51,7 @@
 .inner:after {
     content: "NO";
     padding-right: 10px;
-    background-color: #bbb;
+    background-color: rgb(224, 0, 0);
     color: #fff;
     text-align: right;
 }
@@ -68,6 +68,7 @@
     border: 0 solid #bbb;
     border-radius: 20px;
     transition: all 0.3s ease-in 0s;
+    margin-bottom: 12px;
 }
 
 .checkbox:checked+.label .inner {
