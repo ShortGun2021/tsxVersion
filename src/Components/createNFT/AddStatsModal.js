@@ -1,9 +1,9 @@
 import React from 'react'
 import { Modal } from 'rsuite';
-import { Button, ButtonToolbar,Grid,Row,Col,Input} from 'rsuite';
+import { Button, ButtonToolbar,Grid,Row,Col,Input,InputNumber,InputGroup} from 'rsuite';
 import { BsPlusSquare } from 'react-icons/bs'
 
-const PropModal = () => {
+const AddStatsModal = () => {
     const [open, setOpen] = React.useState(false);
     const [overflow, setOverflow] = React.useState(true);
     const handleOpen = () => setOpen(true);
@@ -11,8 +11,15 @@ const PropModal = () => {
     const CustomInput = ({ ...props }) => <Input {...props} style={styles} />;
     const styles = {
         marginBottom: 10
-      };
-    return (
+    };
+    const [value, setValue] = React.useState(0);
+    const handleMinus = () => {
+      setValue(parseInt(value, 10) - 1);
+    };
+    const handlePlus = () => {
+      setValue(parseInt(value, 10) + 1);
+    };
+      return (
         <>
             <div className="modal-container">
             <ButtonToolbar>
@@ -26,23 +33,30 @@ const PropModal = () => {
 
                 <Modal overflow={overflow} open={open} onClose={handleClose} style={{marginTop:"10%"}}>
                     <Modal.Header>
-                        <Modal.Title>Add Properties</Modal.Title>
+                        <Modal.Title>Add Stats</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         {/* <Paragraph /> */}
-                        <p>Properties show up underneath your item, are clickable, and can be filtered in your collection's sidebar.</p>
+                        <p>Stats show up underneath your item, are clickable, and can be filtered in your collection's sidebar.</p>
                         <Grid fluid>
                             <Row class="d-flex justify-content-around mt-5">
                             <Col xs={12} md={6}>
                                 
-                                <h4>Type</h4>
                                 <h4>Name</h4>
+                                <h4>Value</h4>
                             
                             </Col>
                             <Col xs={24} sm={12} md={8}>
                                 
-                                <CustomInput  class="grid-child" size="lg" placeholder="Character" />
-                                <CustomInput  class="grid-child" size="lg" placeholder="Male" />
+                                <CustomInput  class="grid-child" size="lg" placeholder="Speed" />
+                                <InputNumber defaultValue={3} min={0}/>
+                                <Input disabled style={styles} value="Of" />
+                                <InputNumber defaultValue={5} min={0}/>
+                                {/* <InputGroup>
+                                    <InputGroup.Button onClick={handleMinus}>-</InputGroup.Button>
+                                    <InputNumber className={'custom-input-number'} value={value} onChange={setValue} />
+                                    <InputGroup.Button onClick={handlePlus}>+</InputGroup.Button>
+                                </InputGroup> */}
                                 
                             </Col>
                             </Row>
@@ -63,4 +77,4 @@ const PropModal = () => {
     )
 }
 
-export default PropModal
+export default AddStatsModal

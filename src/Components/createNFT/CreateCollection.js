@@ -1,5 +1,7 @@
 import React from 'react'
 import PropModal from './PropModal'
+import AddLevelsModal from './AddLevelsModal'
+import AddStatsModal from './AddStatsModal'
 
 import { Dropdown, DropdownToggle, Button, Table } from 'reactstrap'
 import { GiHamburgerMenu } from 'react-icons/gi'
@@ -63,7 +65,7 @@ const CreateCollection = () => {
                                     color='white'
                                     // onClick={}
                                 >
-                                    <PropModal/>
+                                    <AddLevelsModal/>
                                 </Button>
                             </td>
                         </tr>
@@ -77,7 +79,7 @@ const CreateCollection = () => {
                             </td>
                             <td>
                                 <Button color='white'>
-                                <PropModal/>
+                                <AddStatsModal/>
                                 </Button>
                             </td>
                         </tr>
